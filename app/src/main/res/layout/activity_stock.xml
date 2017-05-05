@@ -6,13 +6,152 @@
     android:layout_height="match_parent"
     tools:context="com.introtoandroid.stockquotes_bradley.StockActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <EditText
+            android:id="@+id/symbolInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/enterText"
+            android:layout_alignBottom="@+id/enterText"
+            android:layout_toEndOf="@+id/enterText"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/enterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="32dp"
+            android:text="Enter Stock Symbol:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/symbolText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="Symbol:"
+            android:textSize="18sp"
+            android:layout_below="@+id/symbolInput"
+            android:layout_alignEnd="@+id/nameText" />
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="Company Name:"
+            android:textSize="18sp"
+            android:layout_below="@+id/symbolText"
+            android:layout_alignEnd="@+id/tradePriceText" />
+
+        <TextView
+            android:id="@+id/tradePriceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Last Trade Price:"
+            android:textSize="18sp"
+            android:layout_below="@+id/nameText"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/tradeTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Last Trade Time:"
+            android:textSize="18sp"
+            android:layout_below="@+id/tradePriceText"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/changeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="Change:"
+            android:textSize="18sp"
+            android:layout_below="@+id/tradeTimeText"
+            android:layout_alignEnd="@+id/tradeTimeText" />
+
+        <TextView
+            android:id="@+id/rangeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/changeText"
+            android:layout_below="@+id/changeText"
+            android:layout_marginTop="16dp"
+            android:text="52 Week Range:"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/symbolOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/nameText"
+            android:text="Text"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/symbolInput" />
+
+        <TextView
+            android:id="@+id/nameOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/symbolOut"
+            android:layout_alignTop="@+id/nameText"
+            android:text="TextView"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <TextView
+            android:id="@+id/tradePriceOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/nameOut"
+            android:layout_alignTop="@+id/tradePriceText"
+            android:text="TextView"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <TextView
+            android:id="@+id/tradeTimeOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/changeText"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/tradePriceOut"
+            android:text="TextView"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <TextView
+            android:id="@+id/changeOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/changeText"
+            android:layout_alignBottom="@+id/changeText"
+            android:layout_alignStart="@+id/tradeTimeOut"
+            android:text="TextView"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/rangeOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rangeText"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/changeOut"
+            android:text="TextView"
+            android:textColor="@android:color/holo_green_dark" />
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
